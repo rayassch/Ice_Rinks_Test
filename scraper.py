@@ -12,6 +12,8 @@ def scrape_table(root):
         # grab all <td>s in the row
         table_cells = row.cssselect("td")
         # if there are any <td>s:
+        print record
+        print table_cells
         if table_cells: 
             #grab the text contents of the first and put in 'record' under the key 'Rink':
             record['Rink'] = table_cells[0].text_content()
