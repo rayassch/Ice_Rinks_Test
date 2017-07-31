@@ -13,7 +13,7 @@ def scrape_table(root):
         table_cells = row.cssselect("td")
         # if there are any <td>s:
         print record
-        print table_cells
+        #print table_cells
         if table_cells: 
             #grab the text contents of the first and put in 'record' under the key 'Rink':
             record['Rink'] = table_cells[0].text_content()
@@ -53,7 +53,7 @@ def scrape_table(root):
             else:
                 record['teamslink'] = "NO MAP LINK"
             # Print out the data we've gathered
-            print record, '------------'
+            #print record, '------------'
             # Finally, save the record to the datastore - 'Rink' is our unique key
             scraperwiki.sqlite.save(["Rink"], record)
 
